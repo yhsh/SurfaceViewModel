@@ -1,0 +1,62 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.5.10"
+    repositories {
+        //mavenCentral()
+        maven { url 'http://nexus.gwm.cn/repository/maven-central/' }
+        //google()
+        maven { url 'http://nexus.gwm.cn/repository/maven-google-proxy/' }
+        //Third part
+        maven { url 'http://nexus.gwm.cn/repository/maven-public/' }
+        //GDC Release
+        maven { url 'http://nexus.gwm.cn/repository/maven-gdc-releases/' }
+        // NoBo
+        maven { url 'http://10.53.131.102:8081/repository/maven-public' }
+        //GDC Snapshots
+        maven { url 'http://nexus.gwm.cn/repository/maven-snapshots/' }
+        maven { url = "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven {url 'https://maven.aliyun.com/repository/public/'}
+        maven {url 'https://maven.aliyun.com/repository/google/'}
+        maven {url 'https://maven.aliyun.com/repository/central/'}
+        maven {url 'https://maven.aliyun.com/repository/gradle-plugin/'}
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.2.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        //mavenCentral()
+        maven { url 'http://nexus.gwm.cn/repository/maven-central/' }
+        //google()
+        maven { url 'http://nexus.gwm.cn/repository/maven-google-proxy/' }
+        //Third part
+        maven { url 'http://nexus.gwm.cn/repository/maven-public/' }
+        //GDC Release
+        maven { url 'http://nexus.gwm.cn/repository/maven-gdc-releases/' }
+        // NoBo
+        maven { url 'http://10.53.131.102:8081/repository/maven-public' }
+        //GDC Snapshots
+        maven { url 'http://nexus.gwm.cn/repository/maven-snapshots/' }
+        maven { url = "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven {url 'https://maven.aliyun.com/repository/public/'}
+        maven {url 'https://maven.aliyun.com/repository/google/'}
+        maven {url 'https://maven.aliyun.com/repository/central/'}
+        maven {url 'https://maven.aliyun.com/repository/gradle-plugin/'}
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
