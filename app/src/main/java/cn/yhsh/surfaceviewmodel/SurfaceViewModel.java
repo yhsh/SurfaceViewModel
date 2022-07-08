@@ -87,9 +87,9 @@ public class SurfaceViewModel extends SurfaceView implements Runnable, SurfaceHo
             mCanvas = mHolder.lockCanvas();
             if (null != mCanvas) {
                 mCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+                mCanvas.drawPath(mPath, mPaint);
             }
 //            mCanvas.drawLines(new float[]{0, 100, 200, 400}, mPaint);
-            mCanvas.drawPath(mPath, mPaint);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
