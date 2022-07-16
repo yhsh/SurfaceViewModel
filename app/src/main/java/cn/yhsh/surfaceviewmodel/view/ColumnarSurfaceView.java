@@ -1,4 +1,4 @@
-package cn.yhsh.surfaceviewmodel;
+package cn.yhsh.surfaceviewmodel.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -24,6 +24,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import cn.yhsh.surfaceviewmodel.R;
 
 /**
  * @author Zheng Cong

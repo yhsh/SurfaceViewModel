@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".BallActivity">
 
-    <cn.yhsh.surfaceviewmodel.SurfaceViewBall
+    <cn.yhsh.surfaceviewmodel.view.SurfaceViewBall
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

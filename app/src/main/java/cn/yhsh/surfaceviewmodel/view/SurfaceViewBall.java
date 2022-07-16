@@ -1,4 +1,4 @@
-package cn.yhsh.surfaceviewmodel;
+package cn.yhsh.surfaceviewmodel.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

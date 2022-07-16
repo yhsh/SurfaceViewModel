@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
+import cn.yhsh.surfaceviewmodel.view.ColumnarSurfaceView;
+
 /**
  * @author Zheng Cong
  * @date 2022/7/11 11:07

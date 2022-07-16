@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <cn.yhsh.surfaceviewmodel.ColumnarSurfaceView
+    <cn.yhsh.surfaceviewmodel.view.ColumnarSurfaceView
         android:id="@+id/surface_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
