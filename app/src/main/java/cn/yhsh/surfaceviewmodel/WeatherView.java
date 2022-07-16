@@ -59,6 +59,12 @@ public class WeatherView extends View {
         super.onDraw(canvas);
         int countWidth = (measuredWidth - countMargin * 2) / 24;
         Log.d("打印正方形大小", countWidth + "=");
+        if (measuredWidth < measuredHeight) {
+            //矩形宽度自己动态适配横竖屏
+            rectWidth = (measuredWidth - countMargin * 2) / 24 - 10;
+            mPaint.setTextSize(12);
+            mPaint.setColor(Color.BLUE);
+        }
         canvas.drawLine(countMargin, measuredHeight - countMargin, measuredWidth - countMargin, measuredHeight - countMargin, mPaint);
         canvas.drawLine(countMargin, measuredHeight - countMargin, countMargin, countMargin, mPaint);
         canvas.drawLine(measuredWidth - countMargin, measuredHeight - countMargin, measuredWidth - countMargin, countMargin, mPaint);
@@ -73,7 +79,6 @@ public class WeatherView extends View {
             //让文字左右居中显示的算法,画东西南北风和风级
             canvas.drawText(i + "级", countMargin + countWidth * i + (countWidth - w) / 2f, measuredHeight - countMargin - countWidth / 2f, mPaint);
             canvas.drawText("东南风", countMargin + countWidth * i + (countWidth - bottomWidth) / 2f, measuredHeight - countMargin - countWidth / 4f, mPaint);
-
             //画矩形
             if (i == 0) {
                 weatherRectF.left = countMargin + (countWidth - rectWidth) * (i + 1) / 2f;
@@ -96,7 +101,7 @@ public class WeatherView extends View {
             canvas.drawRect(weatherRectF, mPaint);
 
             //矩形上面画雨水量
-            canvas.drawText("3mm", weatherRectF.left, measuredHeight - countMargin - countWidth - rectWidth * nextInt - 4, mPaint);
+            canvas.drawText(i + "mm", weatherRectF.left, measuredHeight - countMargin - countWidth - rectWidth * nextInt - 4, mPaint);
             if (i == 0) {
                 continue;
             }
