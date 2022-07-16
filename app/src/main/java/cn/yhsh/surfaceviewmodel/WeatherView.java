@@ -101,7 +101,9 @@ public class WeatherView extends View {
             canvas.drawRect(weatherRectF, mPaint);
 
             //矩形上面画雨水量
-            canvas.drawText(i + "mm", weatherRectF.left, measuredHeight - countMargin - countWidth - rectWidth * nextInt - 4, mPaint);
+            String rainText = nextInt + "mm";
+            mPaint.getTextBounds(rainText, 0, rainText.length(), textRect);
+            canvas.drawText(rainText, countMargin + countWidth * i + (countWidth - textRect.width()) / 2f, measuredHeight - countMargin - countWidth - rectWidth * nextInt - 4, mPaint);
             if (i == 0) {
                 continue;
             }
