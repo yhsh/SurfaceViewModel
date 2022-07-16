@@ -21,15 +21,21 @@ import java.util.Random;
 public class WeatherView extends View {
     private int viewWidthSize = 200;
     private int viewHeightSize = 100;
-    private int countMargin = 20;
+    /**
+     * view控件的左右边距
+     */
+    private int viewMargin = 20;
+    /**
+     * 矩形的默认宽度
+     */
     private int rectWidth = 40;
     private Paint mPaint;
     private int measuredHeight;
     private int measuredWidth;
-    private float[] points = new float[]{};
     private Rect textRect;
     private RectF weatherRectF;
     private Random random;
+    private String windName;
 
     public WeatherView(Context context) {
         this(context, null);
@@ -52,42 +58,44 @@ public class WeatherView extends View {
         textRect = new Rect();
         weatherRectF = new RectF();
         random = new Random();
+        windName = "东南风";
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        int countWidth = (measuredWidth - countMargin * 2) / 24;
+        int countWidth = (measuredWidth - viewMargin * 2) / 24;
         Log.d("打印正方形大小", countWidth + "=");
         if (measuredWidth < measuredHeight) {
             //矩形宽度自己动态适配横竖屏
-            rectWidth = (measuredWidth - countMargin * 2) / 24 - 10;
+            rectWidth = (measuredWidth - viewMargin * 2) / 24 - 10;
             mPaint.setTextSize(12);
             mPaint.setColor(Color.BLUE);
         }
-        canvas.drawLine(countMargin, measuredHeight - countMargin, measuredWidth - countMargin, measuredHeight - countMargin, mPaint);
-        canvas.drawLine(countMargin, measuredHeight - countMargin, countMargin, countMargin, mPaint);
-        canvas.drawLine(measuredWidth - countMargin, measuredHeight - countMargin, measuredWidth - countMargin, countMargin, mPaint);
-        canvas.drawLine(countMargin, measuredHeight - countMargin - countWidth, measuredWidth - countMargin, measuredHeight - countMargin - countWidth, mPaint);
-        mPaint.getTextBounds("东南风", 0, "东南风".length(), textRect);
+        canvas.drawLine(viewMargin, measuredHeight - viewMargin, measuredWidth - viewMargin, measuredHeight - viewMargin, mPaint);
+        canvas.drawLine(viewMargin, measuredHeight - viewMargin, viewMargin, viewMargin, mPaint);
+        canvas.drawLine(measuredWidth - viewMargin, measuredHeight - viewMargin, measuredWidth - viewMargin, viewMargin, mPaint);
+        canvas.drawLine(viewMargin, measuredHeight - viewMargin - countWidth, measuredWidth - viewMargin, measuredHeight - viewMargin - countWidth, mPaint);
+        mPaint.getTextBounds(windName, 0, windName.length(), textRect);
         int bottomWidth = textRect.width();
         int bottomHeight = textRect.height();
         for (int i = 0; i < 24; i++) {
-            mPaint.getTextBounds(i + "级", 0, (i + "级").length(), textRect);
+            String windLevel = i + "级";
+            mPaint.getTextBounds(windLevel, 0, windLevel.length(), textRect);
             int w = textRect.width();
             int h = textRect.height();
             //让文字左右居中显示的算法,画东西南北风和风级
-            canvas.drawText(i + "级", countMargin + countWidth * i + (countWidth - w) / 2f, measuredHeight - countMargin - countWidth / 2f, mPaint);
-            canvas.drawText("东南风", countMargin + countWidth * i + (countWidth - bottomWidth) / 2f, measuredHeight - countMargin - countWidth / 4f, mPaint);
+            canvas.drawText(windLevel, viewMargin + countWidth * i + (countWidth - w) / 2f, measuredHeight - viewMargin - countWidth / 2f, mPaint);
+            canvas.drawText(windName, viewMargin + countWidth * i + (countWidth - bottomWidth) / 2f, measuredHeight - viewMargin - countWidth / 4f, mPaint);
             //画矩形
             if (i == 0) {
-                weatherRectF.left = countMargin + (countWidth - rectWidth) * (i + 1) / 2f;
+                weatherRectF.left = viewMargin + (countWidth - rectWidth) * (i + 1) / 2f;
             } else {
                 weatherRectF.left = weatherRectF.left + rectWidth + (countWidth - rectWidth);
             }
             Log.d("打印左边距", weatherRectF.left + "");
             weatherRectF.right = weatherRectF.left + rectWidth;
-            int heightCount = (measuredHeight - countMargin) / rectWidth;
+            int heightCount = (measuredHeight - viewMargin) / rectWidth;
             Log.d("打印矩形高度分多少个", heightCount + "");
             int nextInt = random.nextInt(heightCount - 1);
             while (true) {
@@ -96,18 +104,18 @@ public class WeatherView extends View {
                 }
                 break;
             }
-            weatherRectF.top = measuredHeight - countMargin - countWidth - rectWidth * nextInt;
-            weatherRectF.bottom = measuredHeight - countMargin - countWidth;
+            weatherRectF.top = measuredHeight - viewMargin - countWidth - rectWidth * nextInt;
+            weatherRectF.bottom = measuredHeight - viewMargin - countWidth;
             canvas.drawRect(weatherRectF, mPaint);
 
             //矩形上面画雨水量
             String rainText = nextInt + "mm";
             mPaint.getTextBounds(rainText, 0, rainText.length(), textRect);
-            canvas.drawText(rainText, countMargin + countWidth * i + (countWidth - textRect.width()) / 2f, measuredHeight - countMargin - countWidth - rectWidth * nextInt - 4, mPaint);
+            canvas.drawText(rainText, viewMargin + countWidth * i + (countWidth - textRect.width()) / 2f, measuredHeight - viewMargin - countWidth - rectWidth * nextInt - 4, mPaint);
             if (i == 0) {
                 continue;
             }
-            canvas.drawLine(countMargin + countWidth * i, measuredHeight - countMargin, countMargin + countWidth * i + 1, countMargin, mPaint);
+            canvas.drawLine(viewMargin + countWidth * i, measuredHeight - viewMargin, viewMargin + countWidth * i + 1, viewMargin, mPaint);
         }
     }
 
