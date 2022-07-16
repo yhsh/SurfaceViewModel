@@ -64,6 +64,9 @@ public class ColumnarActivity extends AppCompatActivity {
     }
 
     public void showAnim(View view) {
+        if (null != player) {
+            return;
+        }
         player = MediaPlayer.create(this, R.raw.shangcheng);
         player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override

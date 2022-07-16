@@ -1,4 +1,4 @@
-package cn.yhsh.surfaceviewmodel;
+package cn.yhsh.surfaceviewmodel.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
