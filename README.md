@@ -9,3 +9,6 @@ SurfaceView学习案例
 - SurfaceView自定义音波图-AnimationSurfaceActivity
 ### 致谢原博主
 - 在次感谢原作者提供获取音波图数据的方法: https://github.com/michael007js/SpectrumForAndroid
+
+##### 图片预览
+![音波动态图预览](https://gitee.com/xiayiye5/SurfaceViewModel/raw/master/pic/GIF%202022-7-16%2014-50-55.gif)
