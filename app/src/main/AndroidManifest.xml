@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoTest">
+        <activity android:name=".WeatherActivity"></activity>
         <activity android:name=".ColumnarActivity" />
         <activity android:name=".AnimationSurfaceActivity" />
         <activity android:name=".SurfaceViewDynDrawActivity" />

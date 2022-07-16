@@ -30,4 +30,8 @@ class MainActivity : AppCompatActivity() {
     fun musicPage(view: View) {
         startActivity(Intent(this, ColumnarActivity::class.java))
     }
+
+    fun weatherPage(view: View) {
+        startActivity(Intent(this, WeatherActivity::class.java))
+    }
 }

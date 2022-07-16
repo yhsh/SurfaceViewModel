@@ -33,4 +33,10 @@
         android:layout_height="wrap_content"
         android:onClick="musicPage"
         android:text="获取音乐音波" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="weatherPage"
+        android:text="天气页面" />
 </LinearLayout>
