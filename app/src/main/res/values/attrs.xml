@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColumnarSurfaceView">
+        <attr name="rect_width" format="dimension" />
+        <attr name="rect_space" format="dimension" />
+    </declare-styleable>
+</resources>

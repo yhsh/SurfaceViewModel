@@ -21,4 +21,10 @@
         android:layout_height="wrap_content"
         android:onClick="ballPage"
         android:text="台球" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="animationPage"
+        android:text="动画" />
 </LinearLayout>
