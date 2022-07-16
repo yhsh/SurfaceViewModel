@@ -13,7 +13,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 /**
- * @author Zheng Cong
+ * @author xiayiye5
  * @date 2022/7/8 15:16
  */
 public class SurfaceViewBall extends SurfaceView implements SurfaceHolder.Callback, Runnable {

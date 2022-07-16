@@ -17,7 +17,7 @@ import android.view.SurfaceView;
 import androidx.annotation.NonNull;
 
 /**
- * @author Zheng Cong
+ * @author xiayiye5
  * @date 2022/7/8 13:46
  */
 public class SurfaceViewModel extends SurfaceView implements Runnable, SurfaceHolder.Callback {

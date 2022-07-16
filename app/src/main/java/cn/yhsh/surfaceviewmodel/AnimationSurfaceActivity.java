@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import cn.yhsh.surfaceviewmodel.view.ColumnarSurfaceView;
 
 /**
- * @author Zheng Cong
+ * @author xiayiye5
  * @date 2022/7/11 11:07
  */
 public class AnimationSurfaceActivity extends Activity {

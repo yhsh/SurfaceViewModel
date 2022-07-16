@@ -28,7 +28,7 @@ import cn.yhsh.surfaceviewmodel.R;
 import cn.yhsh.surfaceviewmodel.utils.VisualizerHelper;
 
 /**
- * @author Zheng Cong
+ * @author xiayiye5
  * @date 2022/7/11 10:03
  * 在次感谢原作者提供获取音波图数据的方法 https://github.com/michael007js/SpectrumForAndroid
  */

@@ -28,7 +28,7 @@ import java.util.concurrent.Executors;
 import cn.yhsh.surfaceviewmodel.R;
 
 /**
- * @author Zheng Cong
+ * @author xiayiye5
  * @date 2022/7/11 10:03
  */
 public class ColumnarSurfaceView extends SurfaceView implements SurfaceHolder.Callback {

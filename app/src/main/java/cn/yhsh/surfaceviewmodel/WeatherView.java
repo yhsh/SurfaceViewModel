@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 import java.util.Random;
 
 /**
- * @author Zheng Cong
+ * @author xiayiye5
  * @date 2022/7/16 15:10
  */
 public class WeatherView extends View {
