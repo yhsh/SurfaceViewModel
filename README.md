@@ -21,3 +21,5 @@ SurfaceView学习案例
 ![台球图预览](https://gitee.com/xiayiye5/SurfaceViewModel/raw/master/pic/3.gif)
 - 音阶图 | 音波图预览
 ![音阶图 | 音波图预览](https://gitee.com/xiayiye5/SurfaceViewModel/raw/master/pic/4.gif)
+- 自定义view天气视图
+![自定义view天气视图](https://gitee.com/xiayiye5/SurfaceViewModel/raw/master/pic/5.png)
