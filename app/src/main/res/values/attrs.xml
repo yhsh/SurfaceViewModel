@@ -4,4 +4,12 @@
         <attr name="rect_width" format="dimension" />
         <attr name="rect_space" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="ColumnarMusicSurfaceView">
+        <attr name="rect_music_width" format="dimension" />
+        <attr name="rect_music_space" format="dimension" />
+        <attr name="rect_music_height_min" format="dimension" />
+        <attr name="rect_music_height_max" format="dimension" />
+        <attr name="rect_music_color" format="color" />
+    </declare-styleable>
 </resources>

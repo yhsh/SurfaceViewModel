@@ -27,4 +27,10 @@
         android:layout_height="wrap_content"
         android:onClick="animationPage"
         android:text="动画" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="musicPage"
+        android:text="获取音乐音波" />
 </LinearLayout>

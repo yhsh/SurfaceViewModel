@@ -22,7 +22,12 @@ class MainActivity : AppCompatActivity() {
     fun ballPage(view: View) {
         startActivity(Intent(this, BallActivity::class.java))
     }
+
     fun animationPage(view: View) {
         startActivity(Intent(this, AnimationSurfaceActivity::class.java))
+    }
+
+    fun musicPage(view: View) {
+        startActivity(Intent(this, ColumnarActivity::class.java))
     }
 }
