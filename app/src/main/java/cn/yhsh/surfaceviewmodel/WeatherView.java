@@ -97,9 +97,10 @@ public class WeatherView extends View {
             weatherRectF.right = weatherRectF.left + rectWidth;
             int heightCount = (measuredHeight - viewMargin) / rectWidth;
             Log.d("打印矩形高度分多少个", heightCount + "");
-            int nextInt = random.nextInt(heightCount - 1);
+            int nextInt;
             while (true) {
-                if (nextInt <= 1) {
+                nextInt = random.nextInt(heightCount - 1);
+                if (nextInt < 1) {
                     nextInt = random.nextInt(heightCount - 1);
                 }
                 break;
