@@ -47,6 +47,23 @@
         app:rect_music_height_min="1dp"
         app:rect_music_width="3dp" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="自定义TextureView实现"
+        android:textColor="@color/black" />
+
+    <cn.yhsh.surfaceviewmodel.view.TextureViewWidget
+        android:id="@+id/texture_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:rect_texture_color="@color/purple_700"
+        app:rect_texture_height_max="100dp"
+        app:rect_texture_height_min="2dp"
+        app:rect_texture_space="2dp" />
 
     <TextView
         android:layout_width="match_parent"

@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import cn.yhsh.surfaceviewmodel.utils.VisualizerHelper;
 import cn.yhsh.surfaceviewmodel.view.ColumnarMusicSurfaceView;
 import cn.yhsh.surfaceviewmodel.view.ColumnarView;
+import cn.yhsh.surfaceviewmodel.view.TextureViewWidget;
 
 
 public class ColumnarActivity extends AppCompatActivity {
@@ -26,6 +27,8 @@ public class ColumnarActivity extends AppCompatActivity {
         columnar = findViewById(R.id.columnar);
         ColumnarMusicSurfaceView columnarSurfaceView = findViewById(R.id.columnar_surface_view);
         VisualizerHelper.getInstance().addCallBack(columnarSurfaceView);
+        TextureViewWidget textureView = findViewById(R.id.texture_view);
+        VisualizerHelper.getInstance().addCallBack(textureView);
         VisualizerHelper.getInstance().addCallBack(columnar);
         ((SeekBar) findViewById(R.id.seek_bar)).setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override

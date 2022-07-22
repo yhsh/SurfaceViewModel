@@ -12,4 +12,12 @@
         <attr name="rect_music_height_max" format="dimension" />
         <attr name="rect_music_color" format="color" />
     </declare-styleable>
+
+    <declare-styleable name="TextureViewWidget">
+        <attr name="rect_texture_width" format="dimension" />
+        <attr name="rect_texture_space" format="dimension" />
+        <attr name="rect_texture_height_min" format="dimension" />
+        <attr name="rect_texture_height_max" format="dimension" />
+        <attr name="rect_texture_color" format="color" />
+    </declare-styleable>
 </resources>
