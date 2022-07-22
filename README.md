@@ -8,6 +8,7 @@ SurfaceView学习案例
 - 3D小球碰撞-台球厅案例(github链接：https://github.com/yhsh/HonorFirstStudy/blob/master/app/src/main/java/com/xiayiye/honorfirst/custom/SurfaceViewBall.java)
 - SurfaceView自定义音波图-AnimationSurfaceActivity
 - 播放歌曲动态获取音阶大小进行音阶高度展示-ColumnarView
+- 使用TextureView是为了解决SurfaceView在多个fragment切换的时候一直附着在window窗口上不隐藏的问题
 ### 致谢原博主
 - 在次感谢原作者提供获取音波图数据的方法: https://github.com/michael007js/SpectrumForAndroid
 
