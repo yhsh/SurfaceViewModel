@@ -15,13 +15,18 @@ SurfaceView学习案例
 ##### 图片预览
 - 音波动态图预览
 ![音波动态图预览](https://raw.githubusercontent.com/yhsh/SurfaceViewModel/master/pic/GIF%202022-7-16%2014-50-55.gif)
+
 - 3D壁纸图预览
 ![3D壁纸图预览](https://raw.githubusercontent.com/yhsh/SurfaceViewModel/master/pic/1.gif)
+
 - 数学函数sin图预览
 ![数学函数sin图预览](https://raw.githubusercontent.com/yhsh/SurfaceViewModel/master/pic/2.gif)
+
 - 台球图预览
 ![台球图预览](https://raw.githubusercontent.com/yhsh/SurfaceViewModel/master/pic/3.gif)
+
 - 音阶图 | 音波图预览
 ![音阶图 | 音波图预览](https://raw.githubusercontent.com/yhsh/SurfaceViewModel/master/pic/4.gif)
+
 - 自定义view天气视图
 ![自定义view天气视图](https://raw.githubusercontent.com/yhsh/SurfaceViewModel/master/pic/5.png)
