@@ -3,7 +3,6 @@ buildscript {
     ext.kotlin_version = "1.5.10"
     repositories {
         maven { url 'http://10.53.131.102:8081/repository/maven-public' }
-        maven { url = "http://maven.aliyun.com/nexus/content/groups/public/" }
         maven {url 'https://maven.aliyun.com/repository/public/'}
         maven {url 'https://maven.aliyun.com/repository/google/'}
         maven {url 'https://maven.aliyun.com/repository/central/'}
@@ -23,7 +22,6 @@ buildscript {
 allprojects {
     repositories {
         maven { url 'http://10.53.131.102:8081/repository/maven-public' }
-        maven { url = "http://maven.aliyun.com/nexus/content/groups/public/" }
         maven {url 'https://maven.aliyun.com/repository/public/'}
         maven {url 'https://maven.aliyun.com/repository/google/'}
         maven {url 'https://maven.aliyun.com/repository/central/'}
